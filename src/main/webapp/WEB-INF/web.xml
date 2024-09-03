@@ -1,0 +1,118 @@
+<element>
+<web-app>
+
+	<servlet>
+		<servlet-name>s11</servlet-name>
+		<servlet-class>Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s11</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s11</servlet-name>
+		<servlet-class>Signup</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s11</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>s1</servlet-name>
+		<servlet-class>Index</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s1</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s2</servlet-name>
+		<servlet-class>Veg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s2</servlet-name>
+		<url-pattern>/veg</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s3</servlet-name>
+		<servlet-class>NonVeg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s3</servlet-name>
+		<url-pattern>/nonveg</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s4</servlet-name>
+		<servlet-class>Pizza</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s4</servlet-name>
+		<url-pattern>/pizza</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s5</servlet-name>
+		<servlet-class>Burger</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s5</servlet-name>
+		<url-pattern>/burger</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s6</servlet-name>
+		<servlet-class>Salad</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s6</servlet-name>
+		<url-pattern>/salad</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>s7</servlet-name>
+		<servlet-class>Acrooms</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s7</servlet-name>
+		<url-pattern>/acrooms</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s8</servlet-name>
+		<servlet-class>Nonacrooms</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s8</servlet-name>
+		<url-pattern>/nonacrooms</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s9</servlet-name>
+		<servlet-class>Acrooms</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s9</servlet-name>
+		<url-pattern>/acrooms</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s10</servlet-name>
+		<servlet-class>Nonacrooms</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s10</servlet-name>
+		<url-pattern>/nonacrooms</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s12</servlet-name>
+		<servlet-class>Booking</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>s12</servlet-name>
+		<url-pattern>/booking</url-pattern>
+	</servlet-mapping>
+</web-app>
+</element>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swag Hotel</title>
+    <style>
+    a{
+    	color: white;
+    }
+    body {
+	    background-size: cover;
+	    font-family: Arial, sans-serif;
+	    margin: 0;
+	}
+	h1{
+    	color: black;
+    }
+	.card-container {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    color: black;
+	}
+	table{
+	color:black;
+	}
+	.foodList {
+	    list-style-type: none; /* Remove the bullets */
+	    padding: 0;
+	    display: flex;
+	    justify-content: center;
+	    flex-wrap: wrap;
+	}
+	.card {
+	    background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency as needed */
+	    border-radius: 10px;
+	    margin: 10px;
+	    padding: 20px;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+	    width: 300px;
+	}
+	
+	.card h2 {
+	    margin-top: 0;
+	    color: #333;
+	}
+	
+	.card p {
+	    color: #666;
+	}
+    header {
+	    background-color: #172D13; /* Semi-transparent white background for header */
+	    margin: 0px;
+	    padding: 10px 0;
+	    display: flex;
+	    text-align: center;
+	}
+	header h1 {
+	    margin: 0 0 0 40px;
+	    color: white; /* Dark text color */
+	}
+	header nav {
+	    margin-top: 10px;
+	    margin-left: 57%;
+	}
+	header nav a {
+	    margin: 0 10px;
+	    text-decoration: none;
+	    color: #fff; /* Dark text color */
+	}
+	header nav a:hover {
+	    text-decoration: underline;
+	}
+   	.card {
+	    border: 1px solid #ccc;
+	    border-radius: 10px;
+	    padding: 20px;
+	    margin: 10px;
+	    width: 300px;
+    }
+    .card img {
+	    border-radius: 50%;
+	    width: 100px;
+	    height: 100px;
+    }
+    .h1img{
+    	display: flex;
+    	align-items:center;
+    	justify-content: center;
+    	gap: 20px;
+    }
+    img{
+    	object-fit: cover;
+    }
+    header nav a:hover {
+            text-decoration: underline;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        color: white;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content a {
+        color: #172D13;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+        span{
+    	margin-left: 20px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Swag Hotel</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <span>Food</span>
+                <div class="dropdown-content">
+                    <a href="veg.html">Veg</a>
+                    <a href="nonveg.html">Non-Veg</a>
+                    <a href="pizza.html">Pizza</a>
+                    <a href="Burger.html">Burgers</a>
+                    <a href="salad.html">Salad</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span>Accommodation</span>
+                <div class="dropdown-content">
+                    <a href="acrooms.html">AC Rooms</a>
+                    <a href="nonacrooms.html">Non AC Rooms</a>
+                    <a href="singlebed.html">Single Bed</a>
+                    <a href="doublebed.html">Double Bed</a>
+                </div>
+            </div>
+            <a style="text-decoration: underline;" href="orders.html">Orders</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div id="orderList" class="card-container"></div>
+    <script>
+        // Function to fetch orders from servlet and update the list
+        function fetchOrders() {
+            fetch('orders')
+            .then(response => response.text()) // Expect HTML response
+            .then(data => {
+                const orderList = document.getElementById('orderList');
+                orderList.innerHTML = data; // Insert HTML content directly
+            })
+            .catch(error => console.error('Error fetching orders:', error));
+        }
+
+        // Call fetchOrders function when the page loads
+        window.onload = fetchOrders;
+    </script>
+</body>
+</html>

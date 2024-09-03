@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Swag Hotel</title>
+</head>
+<body>
+    <div id="bookingContent">
+        <!-- Booking content will be inserted here -->
+    </div>
+
+    <script>
+        // Function to fetch booking page content from servlet and update the HTML
+        function fetchBookingPage() {
+            fetch('/booking?id=1')
+            .then(response => response.text())
+            .then(data => {
+                const bookingContent = document.getElementById('bookingContent');
+                bookingContent.innerHTML = data; // Insert fetched content into the div
+            })
+            .catch(error => console.error('Error fetching booking page:', error));
+        }
+
+        // Call fetchBookingPage function when the page loads
+        window.onload = fetchBookingPage;
+    </script>
+</body>
+</html>
